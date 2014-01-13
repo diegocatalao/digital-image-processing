@@ -149,3 +149,12 @@ clean_up:
 #include <string.h>
 
 /**
+ * @brief Indicates successful execution (no error).
+ */
+#define STATUS_NO_ERROR    0x00
+
+/**
+ * @def STATUS_INVALID_ARG
+ * @brief Indicates an invalid argument was provided to a function.
+ */
+#define STATUS_INVALID_ARG 0x01
