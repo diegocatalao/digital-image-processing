@@ -170,3 +170,11 @@ clean_up:
  * - vector: Pointer to pixel data (row-major order)
  */
 typedef struct {
+  int  max;       /**< Maximum color value */
+  int  lines;     /**< Number of rows (image height) */
+  int  columns;   /**< Number of columns (image width) */
+  int* vector;    /**< Pixel data (R, G, B values as integers) */
+} ppm_t;
+
+/**
+ * @brief Reads a PPM image file and loads its contents into a ppm_t structure.
