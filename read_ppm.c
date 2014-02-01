@@ -178,3 +178,9 @@ typedef struct {
 
 /**
  * @brief Reads a PPM image file and loads its contents into a ppm_t structure.
+ * Opens a PPM file in ASCII format (P3), parses the header and pixel data,
+ * and stores the result in a dynamically allocated ppm_t structure.
+ * Skips comment lines starting with '#'.
+ *
+ * @param filepath Path to the PPM file.
+ * @param ppm_ptr Pointer to a ppm_t pointer to be allocated and filled.
