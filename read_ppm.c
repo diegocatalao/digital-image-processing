@@ -184,3 +184,11 @@ typedef struct {
  *
  * @param filepath Path to the PPM file.
  * @param ppm_ptr Pointer to a ppm_t pointer to be allocated and filled.
+ *
+ * @return STATUS_NO_ERROR on success, STATUS_INVALID_ARG on failure.
+ */
+int read_ppm_file(char* filepath, ppm_t** ppm_ptr) {
+  int status = STATUS_NO_ERROR;
+
+  FILE*  fptr = NULL;
+  char*  cursor = NULL;  // the current line
