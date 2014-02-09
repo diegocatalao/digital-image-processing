@@ -192,3 +192,12 @@ int read_ppm_file(char* filepath, ppm_t** ppm_ptr) {
 
   FILE*  fptr = NULL;
   char*  cursor = NULL;  // the current line
+
+  if (filepath == NULL) {
+    printf("Invalid filepath (nil)");
+    status = STATUS_INVALID_ARG;
+    goto clean_up;
+  }
+
+  if (*ppm_ptr != NULL) {
+    printf("Invalid argument ppm_ptr (not nil)\n");
