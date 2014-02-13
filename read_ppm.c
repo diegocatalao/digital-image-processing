@@ -201,3 +201,12 @@ int read_ppm_file(char* filepath, ppm_t** ppm_ptr) {
 
   if (*ppm_ptr != NULL) {
     printf("Invalid argument ppm_ptr (not nil)\n");
+    goto clean_up;
+  }
+
+  if ((fptr = fopen(filepath, "r")) == NULL) {
+    printf("Unable to open file %s\n", filepath);
+    status = STATUS_INVALID_ARG;
+    goto clean_up;
+  }
+
