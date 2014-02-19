@@ -210,3 +210,12 @@ int read_ppm_file(char* filepath, ppm_t** ppm_ptr) {
     goto clean_up;
   }
 
+ * @brief Represents an image in the PPM (P3) format.
+ *
+ * Holds metadata and pixel data for a PPM image:
+ * - format: Magic number (e.g., "P3")
+ * - max: Maximum pixel intensity
+ * - lines: Image height in pixels
+ * - columns: Image width in pixels
+ * - vector: Pointer to pixel data (row-major order)
+ */
