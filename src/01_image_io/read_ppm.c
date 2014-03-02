@@ -228,3 +228,6 @@ int read_ppm_file(char* filepath, ppm_t** ppm_ptr) {
  * @brief Indicates an invalid argument was provided to a function.
  */
 #define STATUS_INVALID_ARG 0x01
+ * @return STATUS_NO_ERROR on success, STATUS_INVALID_ARG on failure.
+ */
+int read_ppm_file(char* filepath, ppm_t** ppm_ptr) {
